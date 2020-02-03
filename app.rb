@@ -18,5 +18,7 @@ class App < Sinatra::Base
         params[:name]
         params[:breed]
         params[:age]
+        @new_puppy = Puppy.new(params[:name], params[:breed], params[:age]) 
+        binding.pry
     end 
 end
