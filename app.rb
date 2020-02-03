@@ -15,10 +15,11 @@ class App < Sinatra::Base
         # @breed = params[:breed]
         # @age = params[:age]
         # "#{@name} #{@breed} #{@age}"
-        params[:name]
-        params[:breed]
-        params[:age]
-        # @new_puppy = Puppy.new(params[:name], params[:breed], params[:age]) 
-        # binding.pry
+        # params[:name]
+        # params[:breed]
+        # params[:age]
+        @new_puppy = Puppy.new(params[:name], params[:breed], params[:age])
+            erb :display_puppy
+            # binding.pry 
     end 
 end
