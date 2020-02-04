@@ -1,4 +1,5 @@
 class Puppy
+    
     attr_accessor :name, :breed, :age
 
     def initialize(name, breed, age)
@@ -7,3 +8,12 @@ class Puppy
         @age = age
     end 
 end 
+    # save
+
+    # def save 
+    #     @@all << self
+    # end 
+
+    # def self.all 
+    #     @@all
+    # end 
