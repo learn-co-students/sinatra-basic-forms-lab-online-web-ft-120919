@@ -2,24 +2,15 @@
 #require 'pry'
 class Puppy
   attr_accessor :name, :breed, :age
-  def initialize ( param1=nil, param2=nil, param3=nil)
+  def initialize ( name, breed, age)
     #binding.pry
-=begin
-    if param1.class==Sinatra::IndifferentHash #used to be Hash but forms use IndifferentHash
-      @name= param1[:name]
-      @breed = param1[:breed]
-      @age = param1[:age]
-    else
-=end
-      @name= param1
-      @breed = param2
-      @age = param3
-    #    end
+    @name= name
+    @breed = breed
+    @age = age
 
-  end
+    end
 
 end
-
 
 
 =begin
@@ -27,6 +18,19 @@ p  = Puppy.new("brad", "black lab", 2)
 puts "#{p.name}"
 p2 = Puppy.new(name: "brad", breed: "black lab", age: 2)
 puts "#{p2.name}"
+
+     if param1.class==Hash #Sinatra::IndifferentHash #used to be Hash but forms use IndifferentHash
+       @name= param1[:name]
+       @breed = param1[:breed]
+       @age = param1[:age]
+     else
+     end
+   end
+  =end
+
+
+=begin
+
 
 See /mnt/c/Users/Numa/dev/flatiron/labs/bringing-it-all-together-online-web-ft-120919/lib/dog.rb
 def initialize(params = nil, id:nil , name:nil, breed:nil)
